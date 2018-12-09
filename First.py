@@ -87,9 +87,10 @@ list_actions()
 def general_keys():
     d1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
     d2 = {'a': 6, 'b': 7, 'z': 20, 'x': 40}
-    for key1 in d1:
-        if key1 in d2:
-            print(key1, " ", end='')
+    d1_to_set = set(d1.keys())
+    d2_to_set = set(d2.keys())
+    result_dict = d1_to_set.intersection(d2_to_set)
+    print(result_dict)
 
 
 general_keys()
